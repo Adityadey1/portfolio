@@ -16,3 +16,16 @@ icon.addEventListener('click', () => {
     icon.src = './assets/moon.png'; // Change icon to moon
   }
 });
+const body = document.body;
+const toggleIcon = document.getElementById('icon'); // Desktop icon
+const hamburgerIcon = document.getElementById('hamburger-icon'); // Hamburger menu icon
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+  body.classList.toggle('dark-mode');
+  
+  // Swap icons
+  const iconPath = body.classList.contains('dark-mode') ? './assets/sun(1).png' : './assets/moon(1).png';
+  toggleIcon.src = iconPath;
+  hamburgerIcon.src = iconPath;
+}
